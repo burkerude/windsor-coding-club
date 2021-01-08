@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Windsor Coding Club</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">;
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+</head>
+<body>
+<style>
+  body{
+      background-image: url("{{ url_for('static', filename='img/Home-Image.jpg') }}");
+  }
+</style>
+
+{% block content %}
+{% endblock %}
+</body>

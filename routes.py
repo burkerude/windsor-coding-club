@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+#set max age for cached pages to zero
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+
+#Routes
+@app.route("/")
+def root():
+    return render_template("home.html")
+
+@app.route("/home")
+def home():
+    return render_template("home.html")
+
+
+@app.route("/resources")
+def resources():
+    return render_template("resources.html")
+
+if __name__ == '__main__':
+  app.run(host = '192.168.111.57', debug=True, port=5000)
