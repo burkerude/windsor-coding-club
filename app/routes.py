@@ -21,4 +21,4 @@ def resources():
     return render_template("resources.html")
 
 if __name__ == '__main__':
-  app.run(host = '192.168.111.57', debug=True, port=5000)
+  app.run(host = '0.0.0.0', debug=False, port=5000)
